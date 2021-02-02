@@ -1,0 +1,53 @@
+---
+layout: default
+title: Blog Post
+header: blog posts
+avatar: true
+---
+    <main id="content" role="main" class="main md-flex flex-wrap items-start">
+      <section
+        class="commerce-blog-wrapper col-12 md-col-8 px2 pt2 pb3 md-px4 md-pt1 md-pb3"
+      >
+        <h1 class="xs-hide sm-hide md-commerce-header h3 md-py2 md-mb4">
+          {{ page.header }}
+        </h1>
+    {% for post in paginator.posts %}
+          <amp-img
+            class="mb3"
+            srcset="{{ post.image | prepend: site.baseurl }} 750w,{{ post.iset | prepend: site.baseurl }} 1280w"
+            width="750"
+            height="427"
+            layout="responsive"
+            alt="{{ page.title }}"
+            noloading=""
+          >
+            <div placeholder="" class="commerce-loader"></div>
+          </amp-img>
+          <div class="mb3 md-mx0">
+            <h2 class="h3">{{ post.title }}
+        </h2>
+            <time datetime="{{ page.date | date_to_xmlschema }}" class="block mb2"
+              >{{ post.date | date: "%b %-d, %Y" }}</time
+            >
+            <p class="mb2">
+            {% if post.description %}
+                {{ post.description | strip_html | strip_newlines | truncate: 250 }}
+            {% else %}
+                {{ post.content | strip_html | strip_newlines | truncate: 250 }}
+            {% endif %}</p>
+            <a
+              href="{{ post.url | prepend: site.baseurl }}"
+              class="commerce-blog-link inline-block h7 md-mb4"
+              >read more</a
+            >
+          </div>
+    {% endfor %}
+      </section>
+{% if paginator.total_pages > 1 %}<!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %} <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="back ampstart-btn ampstart-btn-secondary inline-block h7 pt3 mt4 md-mb4"">← Newer Posts</a> {% endif %}
+    {% if paginator.next_page %} <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next ampstart-btn ampstart-btn-secondary inline-block h7 pt3 mt4 md-mb4">Older Posts →</a>{% endif %}
+  </div>{% endif %}
+
+    {% include aside.html %}
+  </main>
