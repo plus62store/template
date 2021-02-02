@@ -1,0 +1,47 @@
+# Site settings
+title: plus62 Embroidery
+email: plus62store.info@gmail.com
+description: Menerima jasa bordir komputer & manual ( JUKI ), untuk Logo, Kopiah/Peci, Mukena, dan lain-lain.. ( Partai Besar )
+baseurl: "" 
+url: "https://plus62store.github.io"
+
+twitter_username: 
+github_username:  
+GoogleAnalytics: UA-xxxxxx-x
+
+twitter:
+  username: 
+facebook:
+  app_id: 
+  publisher: 
+
+sass:
+    style: compressed
+
+# Build settings
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jemoji
+
+defaults:
+    - {scope: {type: posts}, values: {layout: post, permalink: '/blog/:title'}}
+
+include:
+  - _pages
+
+exclude:
+  - CNAME
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+paginate: 12
+paginate_path: '/blog/:num'
