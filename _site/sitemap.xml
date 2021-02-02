@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/blog/sejarah-penggunaan-masker</loc>
+<lastmod>2020-01-01T10:59:21+07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/disiplin-3m-hal-sederhana</loc>
+<lastmod>2021-01-15T10:59:21+07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/perbedaan-3-kemasan-vaksin-COVID-19</loc>
+<lastmod>2021-01-19T22:06:21+07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/produk.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/kontak.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/about/</loc>
+</url>
+</urlset>
