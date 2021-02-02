@@ -51,7 +51,7 @@ permalink: /manifest.json
 		},
 		{
 			"src": "{{ site.baseurl }}/assets/favicons/icon.svg",
-			"sizes": "any"
+			"sizes": "16x16"
 		}
 	]
 }
