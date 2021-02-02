@@ -11,7 +11,7 @@ permalink: /manifest.json
   "theme_color": "#ffffff",
 	"display": "standalone",
 	"orientation": "portrait",
-	"start_url": "{{ site.baseurl }}/blog/",
+	"start_url": "{{ site.baseurl }}/",
 	"icons": [
 		{
 			"src": "{{ site.baseurl }}/assets/favicons/android-icon-36x36.png",
