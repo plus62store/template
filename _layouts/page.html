@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+    
+    <main id="content" role="main" class="main flex flex-wrap items-start">
+      <section
+        class="commerce-blog-wrapper col-12 md-col-8 px2 pt2 pb3 md-px4 md-pt1 md-pb3"
+      >
+        <div class="flex flex-column">
+          <div class="mb3 md-mx0">
+          <center><h1 class="h3 mb2">{{ page.title }}</h1></center>
+            <time datetime="{{ page.date | date_to_xmlschema }}" class="block mb2"
+              >{{ post.date | date: "%b %-d, %Y" }}</time
+            >
+            <p class="mb2">
+   			 {{ content }}
+            </p>
+          </div>
+        </div>
+      </section>
+    {% include aside.html %}
+    </main>

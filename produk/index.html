@@ -1,0 +1,65 @@
+---
+layout: default
+header: products
+permalink: /produk.html
+---
+
+    <main id="content" role="main" class="main md-flex flex-wrap items-start">
+      <amp-img
+        class="commerce-listing-banner xs-hide sm-hide"
+        src="/assets/img/design.jpg"
+        width="2560"
+        height="400"
+        layout="responsive"
+        alt="Product listing"
+        noloading=""
+        ><div placeholder="" class="commerce-loader"></div
+      ></amp-img>
+      <section
+        class="commerce-blog-wrapper col-12 md-col-8 px2 pt2 pb3 md-px4 md-pt1 md-pb3"  itemscope itemtype="http://schema.org/BlogPosting"
+      >
+        <h1 class="xs-hide sm-hide md-commerce-header h3 md-py2 md-mb4">
+          {{ page.header }}
+        </h1>
+                	{% for produk in site.data.produk %}
+                	<div class="produk">
+          <amp-img
+            class="mb3"
+            srcset="{{ produk.image }} 750w,{{ produk.image }} 1280w"
+            width="235"
+            height="235"
+            layout="responsive"
+            alt="{{ produk.name }}"
+            noloading=""
+          >
+            <div placeholder="" class="commerce-loader"></div>
+          </amp-img>
+          <div class="mb3 md-mx0">
+            <h2 class="h7">{{ produk.name }}
+        </h2>
+            <time class="block mb2"
+              >{{ produk.model }}</time
+            >
+            <p class="mb2">
+            {% if produk.desc %}
+                {{ produk.desc | strip_html | strip_newlines | truncate: 250 }}
+            {% else %}
+                {{ produk.content | strip_html | strip_newlines | truncate: 250 }}
+            {% endif %}</p>
+            <center><a
+              href="{{ produk.url | prepend: site.baseurl }}" target="_blank"
+              class="commerce-blog-link inline-block h6 md-mb4"
+              >idr {{ produk.price }} | buy now</a
+            ></center>
+          </div>
+      </div>
+    {% endfor %}
+      </section>
+{% if paginator.total_pages > 1 %}<!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %} <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="prev">← Newer Posts</a> {% endif %}
+    {% if paginator.next_page %} <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">Older Posts →</a>{% endif %}
+  </div>{% endif %}
+
+    {% include aside.html %}
+  </main>
