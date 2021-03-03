@@ -33,6 +33,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jemoji
+  - jekyll-admin
 
 defaults:
     - {scope: {type: posts}, values: {layout: post, permalink: '/blog/:title'}}
