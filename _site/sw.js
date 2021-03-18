@@ -1,18 +1,20 @@
-var CACHE_NAME = '20210202204020';
+var CACHE_NAME = '20210318105052';
 
 self.addEventListener('install',event => {
   event.waitUntil(caches.open(CACHE_NAME)
   .then(cache => cache.addAll([
     '/404.html',
     
+    '/kontak/',
     '/blog/',
-    '/produk.html',
+    '/produk/',
     '/',
-    '/kontak.html',
     '/about/',
     
+    '/privacy-policy',
     
     
+    '/term-service',
     
     
     
